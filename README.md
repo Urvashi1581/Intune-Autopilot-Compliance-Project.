@@ -12,6 +12,58 @@ This project demonstrates how to **automatically enroll Windows 11 devices into 
 
 ---
 
+## Steps Performed
+
+### 1. Export Windows Autopilot Device Hash
+- Used PowerShell script to generate hardware hash.
+- Exported as `DeviceHash.csv`.
+- Uploaded hash into **Intune Autopilot Devices**.
+
+📷 Screenshot:  
+![Windows Enrollment](screenshots/Windows_Enrollment.jpg)
+
+---
+
+### 2. Create Autopilot Deployment Profile
+- Configured **Deployment profile** in Intune.
+- Assigned the profile to uploaded device(s).
+- Verified that the profile applied correctly.
+
+📷 Screenshot:  
+![Autopilot Profile Added VM](screenshots/Windows_Autopilot_Profile_Added_VM.jpg)
+
+---
+
+### 3. Configure Compliance Policies
+- Created compliance rules (e.g., Require BitLocker, Antivirus on, Minimum OS version).
+- Assigned compliance policy to Autopilot group.
+- Device evaluated as **Compliant** or **Non-Compliant**.
+
+📷 Screenshot:  
+![Compliance Settings](screenshots/Windows_Compliance_Policy.jpg)
+
+---
+
+### 4. Test Conditional Access
+- Set Conditional Access rule in Entra ID:  
+  → *Only compliant devices can access M365 apps (Outlook, Teams, SharePoint).*
+- Non-compliant device got blocked.
+- Guided remediation steps fixed issues and restored access.
+
+📷 Screenshot:  
+![Access Blocked](screenshots/Conditional_Access_Blocked.jpg)
+
+---
+
+### 5. Final Device Status in Intune
+- Verified device enrollment under **Intune → Devices**.
+- Checked Compliance status (green = compliant, red = non-compliant).
+- Confirmed successful Autopilot + Intune MDM flow.
+
+📷 Screenshot:  
+![Final Status](screenshots/Intune_Device_Status.jpg)
+
+
 
 
 ## 🏗️ High-Level Flow
