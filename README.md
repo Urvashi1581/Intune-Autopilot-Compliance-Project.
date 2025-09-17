@@ -1,10 +1,10 @@
-# 🚀 Windows Autopilot + Intune Compliance Project
+# Windows Autopilot + Intune Compliance Project
 
 This project demonstrates how to **automatically enroll Windows 11 devices into Intune** using **Windows Autopilot**, and how to enforce security with **Compliance Policies + Conditional Access**. It mirrors a real-world setup used by IT teams to provision laptops and protect M365 data.
 
 ---
 
-## 📌 Goals
+## Goals
 - Autopilot enrollment for Windows 11 VM (VMware Workstation)
 - Intune **Compliance Policies**: Defender, Firewall, PIN/Password, (optional) BitLocker
 - **Conditional Access**: allow M365 access only if device is **compliant**
@@ -19,8 +19,7 @@ This project demonstrates how to **automatically enroll Windows 11 devices into 
 - Exported as `DeviceHash.csv`.
 - Uploaded hash into **Intune Autopilot Devices**.
 
-📷 Screenshot:  
-![Windows Enrollment](screenshots/Windows_Enrollment.jpg)
+
 
 ---
 
@@ -29,8 +28,7 @@ This project demonstrates how to **automatically enroll Windows 11 devices into 
 - Assigned the profile to uploaded device(s).
 - Verified that the profile applied correctly.
 
-📷 Screenshot:  
-![Autopilot Profile Added VM](screenshots/Windows_Autopilot_Profile_Added_VM.jpg)
+
 
 ---
 
@@ -39,8 +37,7 @@ This project demonstrates how to **automatically enroll Windows 11 devices into 
 - Assigned compliance policy to Autopilot group.
 - Device evaluated as **Compliant** or **Non-Compliant**.
 
-📷 Screenshot:  
-![Compliance Settings](screenshots/Windows_Compliance_Policy.jpg)
+
 
 ---
 
@@ -50,8 +47,7 @@ This project demonstrates how to **automatically enroll Windows 11 devices into 
 - Non-compliant device got blocked.
 - Guided remediation steps fixed issues and restored access.
 
-📷 Screenshot:  
-![Access Blocked](screenshots/Conditional_Access_Blocked.jpg)
+
 
 ---
 
@@ -60,13 +56,11 @@ This project demonstrates how to **automatically enroll Windows 11 devices into 
 - Checked Compliance status (green = compliant, red = non-compliant).
 - Confirmed successful Autopilot + Intune MDM flow.
 
-📷 Screenshot:  
-![Final Status](screenshots/Intune_Device_Status.jpg)
 
 
 
 
-## 🏗️ High-Level Flow
+## 🏗High-Level Flow
 
 ```mermaid
 
