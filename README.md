@@ -6,7 +6,7 @@ This project demonstrates how to **automatically enroll Windows 11 devices into 
 
 ## Goals
 - Autopilot enrollment for Windows 11 VM (VMware Workstation)
-- Intune **Compliance Policies**: Defender, Firewall, PIN/Password, (optional) BitLocker
+- Intune **Compliance Policies**: Defender, Firewall, PIN/Password, BitLocker
 - **Conditional Access**: allow M365 access only if device is **compliant**
 - Test: make device non-compliant → blocked → remediate → allowed
 
